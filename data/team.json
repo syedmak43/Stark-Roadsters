@@ -1,0 +1,35 @@
+{
+  "note": "REQUIRED INTEGRATION: Import exactly the six existing team-member names and roles from the original Race Pakistan project. No names or roles have been invented.",
+  "members": [
+    {
+      "id": 1,
+      "name": null,
+      "role": null
+    },
+    {
+      "id": 2,
+      "name": null,
+      "role": null
+    },
+    {
+      "id": 3,
+      "name": null,
+      "role": null
+    },
+    {
+      "id": 4,
+      "name": null,
+      "role": null
+    },
+    {
+      "id": 5,
+      "name": null,
+      "role": null
+    },
+    {
+      "id": 6,
+      "name": null,
+      "role": null
+    }
+  ]
+}
