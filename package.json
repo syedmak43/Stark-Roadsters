@@ -1,0 +1,13 @@
+{
+  "name": "stark-roadsters",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Dependency-free, Vercel-ready Stark Roadsters brand experience",
+  "scripts": {
+    "dev": "node scripts/serve.mjs",
+    "build": "node scripts/build.mjs",
+    "check": "node scripts/check.mjs",
+    "preview": "node scripts/serve.mjs dist"
+  }
+}
