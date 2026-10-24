@@ -1,0 +1,17 @@
+{
+  "status": "passed",
+  "type": "static-production",
+  "logoSha256": "1801cad508d98d0bbd2dd168adbacff96a09f448527914fd3640709bb9f1d1ee",
+  "logoDimensions": "1254x1254",
+  "officialColors": [
+    "#807473",
+    "#1763A0",
+    "#1C278A",
+    "#970F12",
+    "#997725"
+  ],
+  "teamSlots": 6,
+  "teamRosterVerified": false,
+  "concept3D": true,
+  "deployment": "Vercel static output directory: dist"
+}
