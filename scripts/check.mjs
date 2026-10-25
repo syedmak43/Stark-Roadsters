@@ -13,6 +13,9 @@ for(const name of ["top","identity","machine","details","team","context"]){
   if(!markup.includes(`id="${name}"`))throw Error("Missing "+name+" section");
 }
 if((markup.match(/stark-roadsters-logo\.png/g)||[]).length<4)throw Error("Official logo not referenced enough");
-if(!markup.includes("not Stark Roadsters' actual competition car"))throw Error("Concept vehicle disclaimer missing");
+if(!markup.includes("ILLUSTRATIVE CONCEPT — NOT THE TEAM'S CAR"))throw Error("Concept vehicle disclaimer missing");
+if(!markup.includes("TEAM ROSTER IN VERIFICATION"))throw Error("Honest roster status missing");
+if(markup.includes("Original member 01"))throw Error("Unverified member placeholders must not be published");
+if(!markup.includes("https://github.com/syedmak43/Stark-Roadsters"))throw Error("Public source link missing");
 console.log("✓ Production artifact checks passed");
-if(!report.teamRosterVerified)console.warn("! Roster source missing: six unverified placeholders correctly retained; import existing names/roles before launch.");
+if(!report.teamRosterVerified)console.warn("! Verified team roster not supplied; roster remains unpublished until confirmed.");

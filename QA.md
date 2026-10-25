@@ -5,7 +5,7 @@
 - `npm run check` — passed static production artifact tests.
 - Official uploaded 1254×1254 logo copied unchanged (same SHA-256 in public asset and production output).
 - All five supplied exact palette tokens present in CSS.
-- Six existing roster slots strictly enforced by build script.
+- Six existing roster slots strictly enforced by build script; incomplete names and roles remain unpublished instead of appearing as placeholder profiles.
 - Verified production-served HTML returned HTTP 200 via local Node server.
 - Automated headless Chromium checks at 1440×900, 768×1024, and 390×844: zero page-JavaScript errors; no horizontal overflow; official logo loaded at natural resolution.
 - Mobile navigation toggle and closing behaviour checked.

@@ -103,6 +103,10 @@ async function loadExistingRoster(){
       throw new Error("Exactly six original roster entries are required");
     const grid=$("#team-grid");
     const complete=data.members.every(m=>typeof m.name==="string"&&m.name.trim()&&typeof m.role==="string"&&m.role.trim());
+    if(!complete){
+      $("#team-grid").setAttribute("aria-label","Team roster pending verification");
+      return;
+    }
     const fragment=document.createDocumentFragment();
     data.members.forEach((m,i)=>{
       const article=document.createElement("article");
@@ -122,12 +126,10 @@ async function loadExistingRoster(){
       fragment.appendChild(article);
     });
     grid.replaceChildren(fragment);
-    grid.setAttribute("aria-label",complete?"Six original Stark Roadsters team members":"Six slots awaiting original team data");
-    if(complete){
-      $("#team-source-note").textContent="Team names and roles are drawn directly from the existing project roster. No new names or roles are introduced.";
-    }
+    grid.classList.add("has-roster");
+    grid.setAttribute("aria-label","Six verified Stark Roadsters team members");
   }catch(error) {
-    console.warn("Keeping unverified roster placeholders:",error);
+    console.warn("Keeping the team roster unpublished until its source can be verified:",error);
   }
 }
 loadExistingRoster();

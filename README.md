@@ -21,7 +21,7 @@ npm run preview             # serves ./dist
 - `src/index.html` — semantic layout with accessible labels and meta tags.
 - `src/scene.js` — dependency-free WebGL renderer for a **procedural illustrative concept**, not a representation of the team's actual car.
 - `src/main.js` — scroll-camera linkage, motion control, keyboard/pointer orbit, navigation and team roster integration.
-- `data/team.json` — six integration slots, never fabricated personal identities.
+- `data/team.json` — six integration slots, never fabricated personal identities. The public site keeps the roster unpublished until all six names and roles are verified.
 - `scripts/build.mjs` — validates the asset signature and resolution, copies the supplied logo byte-for-byte, prepares Vercel's `dist/` output and produces a build report.
 
 ## IMPORTANT: Original project not provided
@@ -29,7 +29,7 @@ npm run preview             # serves ./dist
 This is a deployable replacement/staging site, **not a modification of the existing Race Pakistan repo**; the original repository was not supplied. The user's original six names/roles, official event details, team achievements, contact details, and actual car assets were also not attached.
 
 ### Preserve the six members unchanged
-Find the six real names and roles in the original Race Pakistan repository and copy them *verbatim* into `data/team.json` in the same order. The site automatically renders that file. Until then, six clearly marked unverified slots appear rather than made-up names/roles. The build checks count and validates there are exactly six records.
+Find the six real names and roles in the original Race Pakistan repository and copy them *verbatim* into `data/team.json` in the same order. The site renders the roster only when all six entries are complete; otherwise it shows one verification notice instead of placeholder profiles. The build checks that there are exactly six records.
 
 ### Competition and team claims
 Only add official Race Pakistan event information sourced from the competition itself. Keep verified Stark Roadsters team achievements under the team side of the site. No titles, competition wins, sponsors, records, specs or performance numbers have been fabricated.
